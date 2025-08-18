@@ -1,23 +1,18 @@
 /*
 ==============================================================
-Stored Procedure: load_bronze
+Stored Procedure: Load Bronze Layer (Source -> Bronze)
 ==============================================================
 Script Purpose:
-    This stored procedure loads data from raw CSV source files 
-    into the Bronze Layer of the Data Warehouse. 
-    It performs truncate-and-load operations for CRM and ERP 
-    source tables, while logging execution time for each load step.
+    This stored procedured loads data into the 'bronze' schema from external CSV files.
+	It performs the following actions:
+	- Truncates the bronze tables before loading data.
+	- Data is ingested via the PostgreSQL COPY command.
 
 Parameters:
     None
 
 Usage Example:
     CALL bronze.load_bronze();
-
-Notes:
-    - All target Bronze tables will be truncated before loading.
-    - Data is ingested via the PostgreSQL COPY command.
-    - Execution times are logged for monitoring and debugging.
 ==============================================================
 */
 
