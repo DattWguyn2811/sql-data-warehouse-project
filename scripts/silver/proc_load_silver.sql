@@ -218,7 +218,7 @@ begin
 	
 	start_time := now();
 	raise notice '>> Truncating Table: silver.erp_px_cat_g1v2';
-	truncate table silver.erp_loc_a101;
+	truncate table silver.erp_px_cat_g1v2;
 	raise notice '>> Inserting Data Into: silver.erp_px_cat_g1v2';
 	insert into silver.erp_px_cat_g1v2(
 		id, 
